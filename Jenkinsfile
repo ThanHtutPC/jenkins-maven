@@ -48,4 +48,15 @@ pipeline {
             }
         }
     }
+    post{
+        success {
+            echo "everything is done"
+        }
+        aborted {
+            echo "re-run this code"
+        }
+        failure {
+            echo "check your code or pipeline"
+        }
+    }
 }
